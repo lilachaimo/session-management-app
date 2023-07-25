@@ -1,4 +1,4 @@
-# Node.js Web Application with NestJS and Redis
+# Session Management with NestJS and Redis
 
 This is a Node.js web application built using NestJS and Redis for session management. The application detects user activity and blocks the user for 5 minutes if they are active for one hour. It also allows users to log in from multiple devices simultaneously.
 
