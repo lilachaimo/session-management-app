@@ -1,0 +1,55 @@
+{
+  "name": "session-management-app",
+  "version": "1.0.0",
+  "description": "Node.js web application with Redis session management using NestJS and Docker Compose",
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/bull": "latest",
+    "@nestjs/common": "^8.1.0",
+    "@nestjs/core": "^8.1.0",
+    "@nestjs/platform-express": "^8.1.0",
+    "@types/cookie-parser": "^1.4.3",
+    "bull": "latest",
+    "cookie-parser": "^1.4.6",
+    "express-session": "^1.17.3",
+    "redis": "^3.1.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^8.0.0"
+  },
+  "scripts": {
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "prestart:prod": "rimraf dist",
+    "prebuild": "npm run build:clean",
+    "build": "nest build",
+    "build:clean": "rimraf dist",
+    "lint": "eslint --ext .js,.ts",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
