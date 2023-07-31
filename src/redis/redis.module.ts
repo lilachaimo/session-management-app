@@ -1,9 +1,9 @@
 // src/modules/redis.module.ts
 import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
 import { BullModule } from '@nestjs/bull';
-import { RedisConfigService } from '../config/redis-config.service';
-import { ActivityProcessor } from '../processors/activity.processor';
-import { ActivityMiddleware } from '../middlewares/activity.middleware'; // Import the ActivityMiddleware
+import { RedisConfigService } from './config/redis-config.service';
+import { ActivityProcessor } from './activity.processor';
+import { ActivityMiddleware } from './activity.middleware'; // Import the ActivityMiddleware
 
 @Module({
   imports: [

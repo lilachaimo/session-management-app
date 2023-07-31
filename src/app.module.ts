@@ -2,10 +2,10 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ActivityMiddleware } from './middlewares/activity.middleware';
+import { ActivityMiddleware } from './redis/activity.middleware';
 import { AllExceptionsFilter } from './filters/all-exceptions.filter';
-import { RedisModule } from './modules/redis.module';
-import { RedisConfigService } from './config/redis-config.service'; // Import the RedisConfigService
+import { RedisModule } from './redis/redis.module';
+import { RedisConfigService } from './redis/config/redis-config.service'; // Import the RedisConfigService
 
 @Module({
   imports: [RedisModule],
